@@ -1,0 +1,561 @@
+@use "./variables" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "eb garamond", serif;
+  h3,
+  h5 {
+    transition: all 1s !important;
+  }
+}
+.no-line::after {
+  display: none;
+}
+
+// HEADER - LOGO + NAV + BUTTON (BURGER MENU AFTER 1024PX)
+header {
+  width: 100%;
+  height: 83px;
+  background-color: $main-blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo {
+    width: 196px;
+    height: 100%;
+    padding-left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    a h1 {
+      color: white;
+      text-decoration: none;
+      font-size: $font-18px;
+      font-weight: normal;
+    }
+  }
+
+  .nav-bar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      gap: $font-20px;
+    }
+    .nav-links a {
+      color: $white;
+      text-decoration: none;
+      padding: 0 10px;
+      font-size: $font-17px;
+    }
+
+    .nav-links a:hover {
+      color: #adc8ff;
+      transition: all 0.5s ease;
+    }
+    .active a {
+      color: #adc8ff;
+    }
+  }
+
+  .header-button {
+    width: 196px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 45px;
+
+    button {
+      width: 172px;
+      height: 45px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: $main-blue;
+      cursor: pointer;
+      font-family: "eb garamond", serif;
+    }
+
+    button a {
+      color: $white;
+      text-decoration: none;
+      font-size: $font-16px;
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border: 1px solid $white;
+      font-size: $font-16px;
+    }
+
+    a:hover {
+      background: $white;
+      color: $dark-blue;
+      transition: all 0.3s ease;
+    }
+  }
+  .burger-icon {
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    padding-right: 10px;
+    display: none;
+  }
+  .burger-line {
+    width: 25px;
+    height: 2px;
+    background-color: $white;
+  }
+  #burger {
+    display: none;
+  }
+}
+
+// FOOTER - LEFT SIDE + RIGHT SIDE (FORM + TEXTS + LINKS )
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: $main-blue;
+  display: flex;
+
+  .footer-left {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+    gap: 40px;
+
+    .foot-head {
+      width: 100%;
+      height: 250px;
+      display: flex;
+
+      align-items: center;
+      a {
+        text-decoration: none;
+      }
+      h2 {
+        color: $white;
+        font-size: 30px;
+        font-weight: normal;
+        width: 98px;
+        height: 40px;
+      }
+    }
+
+    .foot-left-mid {
+      width: 150px;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      color: $white;
+      font-size: $font-17px;
+    }
+
+    .foot-left-bottom {
+      width: 100%;
+      height: 200px;
+      display: flex;
+
+      align-items: center;
+      gap: 40px;
+
+      button {
+        width: 199px;
+        height: 45px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: $main-blue;
+        cursor: pointer;
+        font-family: "eb garamond", serif;
+
+        a {
+          color: $white;
+          text-decoration: none;
+          font-size: $font-16px;
+          width: 100%;
+          height: 100%;
+          border-radius: 25px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          border: 1px solid $white;
+          font-size: $font-16px;
+
+          &:hover {
+            background: $white;
+            color: $dark-blue;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+
+    .left-links {
+      color: $white;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+
+    .foot-svg {
+      display: none;
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+    }
+  }
+
+  .footer-right {
+    width: 50%;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    .footer-right-head {
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      padding-top: 15%;
+
+      h4 {
+        color: $white;
+        font-size: $font-32px;
+        font-weight: normal;
+      }
+    }
+
+    .footer-form {
+      width: 60%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 50px;
+
+      label {
+        color: $white;
+        font-size: $font-17px;
+        width: 100%;
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        background-color: $main-blue;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $white;
+
+        &:hover {
+          background-color: #17205e;
+        }
+        &:focus {
+          border-bottom: 1px solid red;
+        }
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        flex-direction: row;
+        gap: 10px;
+
+        input {
+          width: 16px;
+          height: 16px;
+          margin: 0;
+        }
+      }
+
+      .footer-button {
+        width: 90%;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        background-color: #a63840;
+        cursor: pointer;
+        font-family: "eb garamond", serif;
+        color: $white;
+        text-decoration: none;
+        font-size: $font-16px;
+        border-radius: 25px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border: 1px solid #a63840;
+
+        &:hover {
+          background: $white;
+          color: #a63840;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    width: 100%;
+    margin-top: 75px;
+
+    span {
+      color: $white;
+      font-size: $font-16px;
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: $font-16px;
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  body {
+    h3 {
+      font-size: 52px !important;
+    }
+  }
+  header {
+    .nav-bar {
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      top: 0;
+      left: 0;
+      position: fixed;
+      z-index: 999;
+
+      ul {
+        width: 100%;
+        height: 30%;
+        flex-direction: column;
+        gap: 35px;
+        position: fixed;
+        top: 10%;
+      }
+      .nav-links a {
+        color: $dark-blue;
+        font-size: 20px;
+      }
+
+      .active a {
+        color: #a63840;
+      }
+    }
+
+    .burger-icon {
+      display: flex;
+      z-index: 1000;
+    }
+    #burger:checked ~ .burger-icon .burger-line {
+      background-color: $dark-blue;
+    }
+    #burger:checked ~ .nav-bar {
+      display: flex;
+    }
+
+    .header-button {
+      display: none;
+    }
+  }
+
+  footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    width: 100%;
+    gap: 0;
+
+    .footer-left {
+      padding-left: 20px;
+      padding-top: 40px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      .foot-head {
+        height: 100px;
+      }
+
+      .foot-left-bottom {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    .footer-right {
+      gap: 0;
+      .footer-right-head {
+        padding: 0;
+      }
+    }
+  }
+
+  .checkbox-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    h3 {
+      font-size: 42px !important;
+    }
+  }
+  header {
+    .logo {
+      padding-left: 25px;
+    }
+  }
+  footer {
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .footer-left {
+      width: 85%;
+      display: flex;
+      padding: 0;
+      width: 100%;
+
+      .foot-head {
+        padding-top: 40px;
+        height: 50px;
+        a {
+          h2 {
+            font-size: 25px;
+          }
+        }
+      }
+      .foot-left-mid {
+        width: 80%;
+        span {
+          font-size: $font-16px;
+        }
+        .span1 {
+          width: 50%;
+        }
+        .span2 {
+          width: 245px;
+        }
+      }
+      .foot-left-bottom {
+        position: relative;
+        display: flex;
+        height: 120px;
+        button {
+          width: 235px;
+
+          a {
+            font-size: $font-17px;
+          }
+        }
+
+        .left-links {
+          position: absolute;
+          top: 420px;
+        }
+      }
+    }
+
+    .footer-right {
+      width: 100%;
+      gap: 0;
+      .footer-right-head {
+        padding: 0;
+        height: 50px;
+        width: 100%;
+        h4 {
+          font-size: 26px;
+          height: 50px;
+          width: 100%;
+        }
+      }
+      .footer-form {
+        padding-left: 10px;
+        width: 90%;
+        label {
+          font-size: 17px;
+          width: 100%;
+        }
+        input {
+          width: 240px;
+        }
+
+        .footer-button {
+          width: 235px;
+        }
+      }
+      .copyright {
+        span {
+          font-size: 14px;
+        }
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    h3 {
+      font-size: $font-32px !important;
+    }
+  }
+
+  footer {
+    .footer-left {
+      .foot-left-bottom {
+        .foot-svg {
+          display: flex;
+          transition: 2s;
+        }
+      }
+    }
+  }
+}

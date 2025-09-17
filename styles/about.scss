@@ -1,0 +1,353 @@
+@use "base" as *;
+@use "variables" as *;
+
+
+
+// ABOUT HERO - TEXT + IMG (COLUMN AFTER 1024PX)
+.about-hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .hero-left {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+      width: 70%;
+      padding: 10px;
+      font-size: $font-32px * 2;
+      font-weight: normal;
+      color: $dark-blue;
+    }
+    p {
+      width: 70%;
+      padding: 10px;
+      font-size: $font-17px;
+      color: $dark-blue;
+    }
+  }
+  .hero-right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-self: flex-end;
+
+    img {
+      width: 100%;
+      max-height: 550px;
+      margin-bottom: 70px;
+      padding-right: 70px;
+    }
+  }
+}
+//  OUR MISSION - IMG + TEXT (DISPLAY NONE AFTER 1024PX)
+.our-mission {
+  width: 100%;
+  height: 100%;
+  background-color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .mission-head {
+    width: 80%;
+    height: 200px;
+    display: flex;
+
+    align-items: center;
+
+    h3 {
+      width: 100%;
+      font-size: $font-32px * 2;
+      font-weight: normal;
+      color: $white;
+    }
+  }
+
+  .our-miss-bottom {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+    gap: 100px;
+    width: 80%;
+
+    img {
+      max-width: 5500px;
+      max-height: 455px;
+    }
+
+    p {
+      color: $white;
+      font-size: $font-17px;
+      width: 400px;
+    }
+  }
+}
+// OUR TEAM - IMG + TEXT CARDS (FLEX WRAP)
+.our-team {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .team-head {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+      font-size: $font-32px * 2;
+      color: $dark-blue;
+      font-weight: normal;
+      padding: 20px;
+    }
+    p {
+      color: $dark-blue;
+      font-size: $font-17px;
+      width: 500px;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+
+  .team-container {
+    display: flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin-left: 150px;
+    align-items: center;
+    gap: 40px;
+
+    .team-card {
+      max-width: 403px;
+      height: 617px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: $dark-blue;
+      padding: 0px;
+
+      img {
+        width: 403px;
+        height: 100%;
+      }
+      h5 {
+        font-size: 15px;
+        color: $white;
+        padding: 20px 0;
+        height: 70px;
+        width: 80%;
+        font-weight: normal;
+      }
+      h4 {
+        font-size: $font-20px;
+        color: $white;
+        font-weight: normal;
+        width: 80%;
+        padding: 20px 0;
+        height: 70px;
+      }
+      p {
+        color: $white;
+        font-size: $font-16px;
+        padding: 30px 0;
+        margin-bottom: 60px;
+        width: 80%;
+        height: 90px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .our-mission {
+    display: none;
+  }
+
+  .about-hero {
+    height: 100%;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    .hero-left {
+      width: 80%;
+      gap: 0;
+
+      h3 {
+        font-size: $font-32px;
+        width: 100%;
+        padding: 20px 0;
+      }
+      p {
+        font-size: $font-16px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+    }
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      height: 300px;
+      img {
+        padding: 0;
+        margin: 0;
+        max-width: 400px;
+        object-fit: cover;
+        width: 100%;
+
+        height: 100%;
+        object-position: top;
+      }
+    }
+  }
+  .our-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .team-head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        font-size: $font-32px;
+      }
+      p {
+        font-size: $font-16px;
+        padding: 0;
+        width: 50%;
+        line-height: 30px;
+      }
+    }
+    .team-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+   
+    .hero-right {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        max-height: 250px;
+      }
+    }
+  }
+  .our-team {
+    .team-head {
+      p {
+        width: 80%;
+      }
+    }
+    .team-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .about-hero {
+    gap: 0;
+    width: 100%;
+    .hero-left {
+
+      padding-bottom: 25px;
+    }
+    .hero-right {
+      display: flex;
+
+      width: 100%;
+      img {
+        width: 100%;
+        height: 350px;
+        max-height: 350px;
+        padding: 20px 0;
+      }
+    }
+  }
+
+  .our-team {
+    margin-bottom: 30px;
+    .team-head {
+      height: 250px;
+      p {
+        width: 75%;
+      }
+    }
+    .team-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin: 0 auto;
+
+      .team-card {
+        width: 320px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 85%;
+          height: 206px;
+        }
+
+        h5 {
+          padding: 0;
+          display: flex;
+          align-items: center;
+          height: 20px;
+          width: 85%;
+        }
+        h4 {
+          padding: 0;
+          display: flex;
+          font-size: $font-20px;
+          align-items: center;
+          height: 30px;
+          width: 85%;
+        }
+        p {
+          padding: 0;
+          margin: 0;
+          display: flex;
+          height: 70px;
+          width: 85%;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

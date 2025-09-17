@@ -1,0 +1,104 @@
+@use "base" as *;
+@use "variables" as *;
+
+
+//  FAQ - HEADING + TEXT CARDS (COLUMN AFTER 768PX)
+.faq-sec {
+  width: 100%;
+  height: 100%;
+  background-color: $dark-blue;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding-bottom: 150px;
+
+  .faq-head {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      font-size: $font-32px * 2;
+      font-weight: normal;
+      width: 80%;
+    }
+  }
+
+  .faq-card {
+    width: 85%;
+    border-bottom: 1px solid $white;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: row;
+    height: 170px;
+
+    .faq-card-left {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      h5 {
+        width: 90%;
+        font-size: $font-20px;
+        font-weight: normal;
+      }
+    }
+    .faq-card-right {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      p {
+        font-size: $font-17px;
+        width: 80%;
+      }
+    }
+  }
+  .border-none {
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-sec {
+    display: flex;
+    gap: 0;
+    .faq-head {
+      height: 50px;
+      h3 {
+        font-size: $font-32px;
+        width: 80%;
+        padding-top: 20px;
+      }
+    }
+
+    .faq-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 250px;
+      gap: 40px;
+
+      .faq-card-left {
+        width: 100%;
+        h5 {
+          font-size: $font-18px;
+          width: 80%;
+          font-weight: normal;
+        }
+      }
+      .faq-card-right {
+        width: 100%;
+        p {
+          font-size: $font-16px;
+        }
+      }
+    }
+  }
+}

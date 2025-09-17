@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../styles/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html"><h1>DineroLi</h1></a>
+      </div>
+      <input type="checkbox" name="burger" id="burger" />
+      <label for="burger" class="burger-icon">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div
+      ></label>
+
+      <nav class="nav-bar">
+        <ul>
+          <li class="nav-links">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="nav-links">
+            <a href="./about.html ">About</a>
+          </li>
+          <li class="nav-links">
+            <a href="./presskit.html">Press Kit</a>
+          </li>
+          <li class="nav-links">
+            <a href="./faq.html">FAQ</a>
+          </li>
+          <li class="nav-links active">
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-button">
+        <button><a href="./contact.html">Contact Us</a></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="contacts">
+        <div class="contacts-head">
+          <h3>Get in Touch</h3>
+          <p>
+            Have a question or need assistance? Feel free to reach out to us
+            through the contact form below. We'll get back to you as soon as
+            possible.
+          </p>
+        </div>
+
+        <form>
+          <div class="head-form">
+            <div class="head-form1">
+              <label for="name">First name*</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="head-form2">
+              <label for="lastname">Last name*</label>
+              <input type="text" name="lastname" id="lastname" required />
+            </div>
+          </div>
+          <label for="email">Email*</label>
+          <input type="email" name="email" id="email" required />
+          <label for="title">Title*</label>
+          <input type="text" name="title" id="title" required />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="3"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-left">
+        <div class="foot-head">
+          <a href="./index.html"><h2>DineroLi</h2></a>
+        </div>
+        <div class="foot-left-mid">
+          <span>123-456-7890 info@mysite.com</span>
+          <span>500 Terry Francine St. San Francisco, CA 94158</span>
+        </div>
+        <div class="foot-left-bottom">
+          <button>
+            <a href="https://www.wix.com/templateslp/links " target="_blank"
+              >Book a Demo</a
+            >
+          </button>
+          <div class="left-links">
+            <a href="./privacy.html">Privacy policy</a>
+            <a href="./statement.html">Accessibility Statement</a>
+          </div>
+          <div class="foot-svg">
+            <a href="./contact.html">
+              <svg
+                preserveAspectRatio="xMidYMid meet"
+                data-bbox="20 20 160 160"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="20 20 160 160"
+                height="44px"
+                width="44px"
+                data-type="color"
+                role="presentation"
+                aria-hidden="true"
+                aria-label=""
+              >
+                <defs>
+                  <style>
+                    #BACK_TO_TOP_BUTTON svg [data-color="1"] {
+                      fill: #f4f5ff;
+                    }
+                    #BACK_TO_TOP_BUTTON svg [data-color="2"] {
+                      fill: #0c112c;
+                    }
+                    #BACK_TO_TOP_BUTTON svg [data-color="3"] {
+                      fill: #1b2774;
+                    }
+                  </style>
+                </defs>
+                <g fill-rule="evenodd">
+                  <path
+                    fill-rule="nonzero"
+                    fill="#FFFFFF"
+                    d="M180 100c0 44.183-35.817 80-80 80s-80-35.817-80-80 35.817-80 80-80 80 35.817 80 80z"
+                    data-color="1"
+                  ></path>
+                  <path
+                    fill="#566FB8"
+                    d="M63.412 114L60 109.649 100.034 78 140 109.652 136.584 114l-36.55-28.3L63.412 114z"
+                    data-color="2"
+                  ></path>
+                  <path
+                    fill-rule="nonzero"
+                    fill="#6D8FF1"
+                    d="M100 24c-41.974 0-76 34.026-76 76s34.026 76 76 76 76-34.026 76-76-34.026-76-76-76zm0-4c44.183 0 80 35.817 80 80s-35.817 80-80 80-80-35.817-80-80 35.817-80 80-80z"
+                    data-color="3"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-right-head">
+          <h4>Subscribe to Our Newsletter</h4>
+        </div>
+
+        <form class="footer-form">
+          <label for="email">Email*</label>
+          <input type="text" name="email" id="email " required />
+          <div class="checkbox-container">
+            <input type="checkbox" name="subscribe" id="subscribe" required />
+            <label for="Subscribe">Yes,subscribe me to your newslatter</label>
+          </div>
+          <button class="footer-button" type="submit">Submit</button>
+        </form>
+
+        <div class="copyright">
+          <span>© 2035 by DineroLi. Powered and secured by</span>
+          <a
+            href="https://www.wix.com/?utm_campaign=vir_created_with "
+            target="_blank"
+            >Wix</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

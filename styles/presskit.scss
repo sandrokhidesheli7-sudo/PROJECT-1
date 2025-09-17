@@ -1,0 +1,218 @@
+@use "base" as *;
+@use "variables" as *;
+
+
+
+
+// DISCOVER - HEADING + CARDS (IMG + TEXT - COLUMN AFTER 1024PX)
+.discover {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 50px 0;
+  gap: 50px;
+
+  .disc-head {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      width: 90%;
+      color: $dark-blue;
+      font-size: $font-32px * 2;
+      font-weight: normal;
+    }
+  }
+
+  .disc-cards {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    img {
+      max-width: 590px;
+      width: 570px;
+      height: 630px;
+      padding: 40px 0;
+    }
+
+    .disc-texts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      gap: 25px;
+
+      h4 {
+        font-size: $font-32px;
+        color: $dark-blue;
+        font-weight: normal;
+        padding-left: 25px;
+      }
+
+      h5 {
+        font-size: $font-18px;
+        color: $dark-blue;
+        font-weight: normal;
+        padding-left: 25px;
+      }
+      p {
+        font-size: $font-17px;
+        color: $dark-blue;
+        width: 400px;
+        padding-left: 25px;
+      }
+      button {
+        width: 185px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: #a63840;
+        cursor: pointer;
+        font-family: "eb garamond", serif;
+        border-radius: 25px;
+        margin-left: 25px;
+        margin-top: 10px;
+      }
+
+      button a {
+        color: $white;
+        text-decoration: none;
+        font-size: $font-16px;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border: 1px solid #a63840;
+        font-size: $font-16px;
+
+        &:hover {
+          background: $white;
+          color: #a63840;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  .reverse {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .disc-texts {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .discover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 0;
+
+    .disc-head {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        font-size: $font-32px;
+        text-align: center;
+        width: 95%;
+      }
+    }
+
+    .disc-cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        object-position: top;
+      }
+      .disc-texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        height: 100%;
+        h4 {
+          font-size: 25px;
+          display: flex;
+          align-self: center;
+        }
+        h5 {
+          font-size: $font-17px;
+        }
+        p {
+          font-size: $font-16px;
+          height: 100%;
+          width: 80%;
+          padding: 0;
+          display: flex;
+          align-self: center;
+          padding-left: 25px;
+          font-size: $font-16px;
+        }
+        button {
+          display: flex;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .discover {
+    .disc-head {
+      h3 {
+        text-align: start;
+      }
+    }
+    .disc-cards {
+      img {
+        height: 300px;
+      }
+
+      .disc-texts {
+        p {
+          align-self: flex-start;
+        }
+        h4 {
+          align-self: flex-start;
+        }
+        h5 {
+          align-self: flex-start;
+        }
+        button {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}

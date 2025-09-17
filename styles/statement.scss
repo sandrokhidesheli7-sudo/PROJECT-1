@@ -1,0 +1,85 @@
+@use "base" as *;
+@use "variables" as *;
+
+.state-head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-blue;
+
+  .state-blue {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 40px 0;
+
+    p {
+      font-size: $font-18px;
+      color: $white;
+
+      a {
+        color: $white;
+      }
+    }
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+.state-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 30px 0;
+
+  .main-head {
+    width: 80%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: clamp(2rem, 0.092rem + 6.107vw, 4rem);
+      font-weight: normal;
+      color: $dark-blue;
+    }
+    p {
+      font-size: $font-17px;
+      color: $dark-blue;
+    }
+  }
+
+  .main-cards {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    h4 {
+      font-size: $font-32px;
+      font-weight: normal;
+      color: $dark-blue;
+      align-self: flex-start;
+    }
+    p {
+      font-size: $font-17px;
+    }
+    ul {
+      width: 90%;
+
+      color: $dark-blue;
+      font-size: $font-17px;
+    }
+    span {
+      font-style: italic;
+    }
+  }
+}
