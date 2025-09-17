@@ -513,6 +513,7 @@ footer .copyright a {
   font-weight: normal;
   width: 90%;
   text-align: center;
+  letter-spacing: -5px;
 }
 .hero-section .hero-texts p {
   font-size: 1.125rem;
@@ -879,6 +880,7 @@ footer .copyright a {
 @media (max-width: 1100px) {
   .hero-section .hero-texts h2 {
     width: 100%;
+    letter-spacing: -4px;
   }
   .hero-section .hero-texts p {
     font-size: 14px;
@@ -897,6 +899,7 @@ footer .copyright a {
 @media (max-width: 1024px) {
   .hero-section .hero-texts h2 {
     width: 100%;
+    letter-spacing: -3px;
   }
   .hero-section .hero-texts p {
     font-size: 14px;
@@ -1069,7 +1072,7 @@ footer .copyright a {
 
 @media (max-width: 768px) {
   .hero-section .hero-texts h2 {
-    width: 70%;
+    letter-spacing: -2px;
   }
   .features {
     width: 100%;
@@ -1160,6 +1163,8 @@ footer .copyright a {
 @media (max-width: 500px) {
   .hero-section .hero-texts h2 {
     width: 80%;
+    width: 70%;
+    letter-spacing: 0px;
   }
   .our-numbers .num-top {
     width: 100%;
