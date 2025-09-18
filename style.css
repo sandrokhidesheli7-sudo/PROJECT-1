@@ -663,6 +663,7 @@ footer .copyright a {
 .features .feat-card h4 {
   font-size: 2rem;
   font-weight: normal;
+  width: 215px;
 }
 .features .feat-card p {
   width: 35%;
@@ -1206,7 +1207,7 @@ footer .copyright a {
     padding: 0;
   }
   .our-story .story-left .story-text p {
-    width: 90%;
+    width: 100%;
     align-self: flex-start;
   }
   .our-story .story-right img {

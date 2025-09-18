@@ -202,6 +202,7 @@
     h4 {
       font-size: $font-32px;
       font-weight: normal;
+      width: 215px;
     }
     p {
       width: 35%;
@@ -828,7 +829,7 @@
         width: 100%;
         padding: 0;
         p {
-          width: 90%;
+          width: 100%;
           align-self: flex-start;
         }
       }
