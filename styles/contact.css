@@ -35,10 +35,12 @@ header .logo {
   align-items: center;
   justify-content: start;
 }
-header .logo a h1 {
-  color: white;
+header .logo a {
   text-decoration: none;
+}
+header .logo a h1 {
   font-size: 1.125rem;
+  color: white;
   font-weight: normal;
 }
 header .nav-bar {

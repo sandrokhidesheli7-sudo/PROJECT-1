@@ -35,10 +35,12 @@ header .logo {
   align-items: center;
   justify-content: start;
 }
-header .logo a h1 {
-  color: white;
+header .logo a {
   text-decoration: none;
+}
+header .logo a h1 {
   font-size: 1.125rem;
+  color: white;
   font-weight: normal;
 }
 header .nav-bar {
@@ -1074,6 +1076,7 @@ footer .copyright a {
 @media (max-width: 768px) {
   .hero-section .hero-texts h2 {
     letter-spacing: -2px;
+    width: 90%;
   }
   .features {
     width: 100%;

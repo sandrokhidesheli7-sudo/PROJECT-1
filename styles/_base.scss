@@ -37,11 +37,14 @@ header {
     align-items: center;
     justify-content: start;
 
-    a h1 {
-      color: white;
+    a {
       text-decoration: none;
-      font-size: $font-18px;
-      font-weight: normal;
+
+      h1 {
+        font-size: $font-18px;
+        color: white;
+        font-weight: normal;
+      }
     }
   }
 
@@ -344,7 +347,6 @@ footer {
     }
   }
 }
-
 
 @media (max-width: 1024px) {
   body {
